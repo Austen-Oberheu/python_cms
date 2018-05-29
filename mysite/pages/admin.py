@@ -4,12 +4,12 @@ from .models import Page, PageContent
 
 class PageContentInLine(admin.TabularInline):
     model = PageContent
-    extra = 1
+    extra = 0
 
 class PageAdmin(admin.ModelAdmin):
     fieldsets = [
         (None, {'fields': ['page_title']}),
-        ('Date information', {'fields': ['pub_date']})
+        ('Date information', {'fields': ['pub_date']}),
     ]
     inlines = [PageContentInLine]
     search_fields = ['page_title']

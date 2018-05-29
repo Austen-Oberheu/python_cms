@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'tinymce',
     'pages.apps.PagesConfig',
     'polls.apps.PollsConfig',
     'django.contrib.admin',

@@ -1,8 +1,9 @@
 from django.urls import path
 
 from . import views
+from .models import Page
 
-app_name = 'pages'
+
 urlpatterns = [
-    path('<page_url>', views.PageView.as_view(), name='<page_title>')
+    path('<str:page_url>/<int:page_id>/', views.PageView, name='PageView')
     ]
